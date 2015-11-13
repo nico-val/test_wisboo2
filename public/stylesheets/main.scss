@@ -27,7 +27,6 @@ body {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
-  /*transition: top 1s;*/
   transition: transform 1s,top 1s;
 }
 
@@ -139,12 +138,7 @@ footer {
       box-shadow: $buttonDarker;
     }
 
-
-
   }
-
-  .grow { transition: all .2s ease-in-out; }
-  .grow:hover { transform: scale(1.1); }
 }
 
 
