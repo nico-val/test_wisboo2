@@ -1,0 +1,150 @@
+@import 'animate';
+
+/* Wisboo Test defaults */
+$orange: #F5C85F;
+$grayBackground: #EEE;
+$darkGrayText: #111;
+$grayText: #999;
+$appFont: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@media (min-width: 1024px) {
+  .container{
+    max-width: 1024px;
+  }
+}
+
+body {
+  font-family: $appFont;
+
+  header{
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+  }
+}
+
+.header-centered{
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  /*transition: top 1s;*/
+  transition: transform 1s,top 1s;
+}
+
+.header-centered-2{
+  transform: translateY(0%);
+  top: 0px;
+}
+
+.headerTopBorder{
+  border-top-color: $orange;
+  border-top-style: solid;
+  border-top-width: 8px;
+}
+
+.divider {
+  height: 260px;
+  width: 3px;
+  background: linear-gradient(#FFF,$orange, #FFF);
+  display: inline-block;
+}
+
+.vcenter {
+  display: inline-block;
+  *display: inline; /*IE7 fix*/
+  zoom: 1;
+  padding: 5px;
+  vertical-align: middle;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.center {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.zigzag-top {
+  background: linear-gradient(-118deg, white 7px, transparent 0) 0 5px, linear-gradient(120deg, white 8px, transparent 0) 0 5px;
+  background-position: left top;
+  background-repeat: repeat-x;
+  background-size: 15px 25px;
+}
+
+.description-block{
+  background-color: $grayBackground;
+}
+
+.description{
+  text-align: center;
+  margin: 70px 30px;
+
+  h1 {
+    color: $darkGrayText;
+    font-size: 18px;
+  }
+
+  p {
+    color: $grayText;
+    font-size: 16px;
+  }
+}
+
+footer {
+  background: linear-gradient(#eee, #ccc 8px);
+  background-color: $orange;
+  background-repeat: repeat-x;
+  background-size: 1px 8px;
+  margin-left: -15px;
+  //margin-right: -15px;
+  padding: 20px;
+  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+
+
+  input {
+    display: block;
+    margin-left: auto;
+    border-style: none;
+    border-radius: 10px;
+    color: $grayText;
+    padding: 5px;
+    margin-right: auto;
+    margin-bottom: 16px;
+  }
+
+  button {
+
+    $cornerRadius: 5px 15px;
+    $buttonDark: darken($orange, 10%);
+    $buttonDarker: darken($buttonDark, 10%);
+
+    background-color: $orange;
+    border-style: solid;
+    border-color: white;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-width: 1px;
+    border-top-left-radius: $cornerRadius;
+    border-bottom-left-radius: $cornerRadius;
+    border-top-right-radius: $cornerRadius;
+    border-bottom-right-radius: $cornerRadius;
+
+    &:hover {
+      background: $buttonDark;
+      box-shadow: $buttonDarker;
+    }
+
+
+
+  }
+
+  .grow { transition: all .2s ease-in-out; }
+  .grow:hover { transform: scale(1.1); }
+}
+
+
